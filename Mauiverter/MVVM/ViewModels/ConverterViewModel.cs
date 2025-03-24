@@ -24,10 +24,7 @@ namespace Mauiverter.MVVM.ViewModels
         public double ToValue { get; set; }
 
         public ICommand ReturnCommand =>
-            new Command(() =>
-            {
-                Convert();
-            });
+            new Command(Convert);
 
         public ConverterViewModel(string quantityName)
         {
